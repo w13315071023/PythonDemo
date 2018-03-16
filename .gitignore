@@ -99,6 +99,5 @@ ENV/
 .mypy_cache/
 
 # self
-# bmp/
-# dist/
-# .vscode/
+bmp/
+.vscode/
