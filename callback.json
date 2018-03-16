@@ -1,0 +1,9 @@
+{
+    "callbackBody": "videonuber=105&event_openid=101&unionid=102&endpoint=oss-cn-beijing.aliyuncs.com&bucket=public-simulator&platform=1&sessionid=90ccb11d-70c0-44d5-975c-5e55b6006708&version=0001&event_userid=100&objectKey=img/2018/3/15/WeChat&type=104&swingid=103",
+    "callbackUrl": "http://39.107.69.190:80/oss/callback"
+}
+{
+    "callbackBody": "videonuber=105&event_openid=101&unionid=102&endpoint=oss-cn-beijing.aliyuncs.com&bucket=public-simulator&platform=1&sessionid=d3d07b8e-e194-432a-9e05-50d832412807&version=0001&event_userid=100&objectKey=img/2018/3/15/WeChat&type=104&swingid=103",
+    "callbackUrl": "http://39.107.69.190/oss/callback"
+}
+-s http://39.107.69.190 -p 7171 -v 0001 -f E:/_wark/TestVideo/WeChat_20171221165925.mp4 -n WeChat --userID 100 --openID 101 --unionID 102 --swingID 103 --type 104 --number 105
