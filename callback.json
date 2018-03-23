@@ -1,9 +1,18 @@
-{
-    "callbackBody": "videonuber=105&event_openid=101&unionid=102&endpoint=oss-cn-beijing.aliyuncs.com&bucket=public-simulator&platform=1&sessionid=90ccb11d-70c0-44d5-975c-5e55b6006708&version=0001&event_userid=100&objectKey=img/2018/3/15/WeChat&type=104&swingid=103",
-    "callbackUrl": "http://39.107.69.190:80/oss/callback"
-}
-{
-    "callbackBody": "videonuber=105&event_openid=101&unionid=102&endpoint=oss-cn-beijing.aliyuncs.com&bucket=public-simulator&platform=1&sessionid=d3d07b8e-e194-432a-9e05-50d832412807&version=0001&event_userid=100&objectKey=img/2018/3/15/WeChat&type=104&swingid=103",
-    "callbackUrl": "http://39.107.69.190/oss/callback"
-}
--s http://39.107.69.190 -p 7171 -v 0001 -f E:/_wark/TestVideo/WeChat_20171221165925.mp4 -n WeChat --userID 100 --openID 101 --unionID 102 --swingID 103 --type 104 --number 105
+
+ D:/Projects/GolfSimulatorPCApp/Exec/OSS-Upload.exe
+ -s http: //39.107.69.190
+ -p D:/UEDownload/
+ --filename video/2018/3/23/
+ --version 2.0 --userid 10000
+ --openid oQmEB1rmcGGea_AYAOevaCax2ACg
+ --unionid otvdh0oghWiDCdyLKxazCOy-0fGM
+ --swingid
+ --type
+ --number
+ --accessKeyID STS.CzSxAMGLtYeTwtBC59V5tFRLo
+ --accessKeySecret 7n6dafDrMLazbGxBcEcdScNq6SKDfJTyQ6g5CWKBKXLu
+ --bucket private-simulator
+ --serpath Right_USB_Camera_2018323162444.mp4
+ --endpoint oss-cn-beijing.aliyuncs.com
+ --securityToken CAIS+wF1q6Ft5B2yfSjIornmM/v5qpNV7qe/dVLzpzVsWrpYqZfnjTz2IHxEe3BuA+0cs/4+mGlZ7v0elqwqE8cdHRQ90haJI9AFnzm6aq/t5uaXj9Vd+rDHdEGXDxnkprywB8zyUNLafNq0dlnAjVUd6LDmdDKkLTfHWN/z/vwBVNkMWRSiZjdrHcpfIhAYyPUXLnzML/2gQHWI6yjydBMw4Fcg1Tklsf/nnZHDtEfk4QekmrNPlePYOYO5asRgBpB7Xuqu0fZ+Hqi7i3IAtEEUrvos0fYVpW6W5orBGSZJ/h+CMuGR78VrKwZ1I7M7HrNApeT7j+3dUwZJWnh2ohqAAWn6Ml/9qg2nYF1b+C3tqz10vDdrqjRk6qZS91hxJDMOpMHjAXdt76N5LmXkMq/A4NflpvhEXcqabIimZsCQbGurzy0bPwCQy4bGy1K/BGSiYBG3RE18c3TmSaO2pFwbyfzsut2IPe4W53mkvvs/Y7DbByxUsmTOCoyOcHKGyjap
+ --sessionid 0599e236-34e0-4409-a99a-d03b2cd79c43
