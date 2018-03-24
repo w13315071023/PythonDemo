@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Ticket</title>
+    <script type="text/javascript" src="js/jquery-1.7.2.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+</head>
+
+<body>
+    <div id="page">
+        <div id="partOne">
+            <div id="firstTitle">北京南站接送站凭条</div>
+            <div id="firstContent">
+                <table id="firstTab">
+                    <tr>
+                        <td>时间：</td>
+                        <td id="time" colspan="4"></td>
+                        <td>
+                            <select id="certifictes" class="text">
+                                <option value="idCard">身份证</option>
+                                <option value="officer">军官证</option>
+                                <option value="student">学生证</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>车次：</td>
+                        <td>
+                            <span>
+                                <input id="train" class="text" value="G164">
+                            </span>
+                        </td>
+                        <td>车厢：</td>
+                        <td>
+                            <span>
+                                <input id="carriage" class="text small" value="1">
+                            </span>
+                        </td>
+                        <td>坐席：</td>
+                        <td>
+                            <span>
+                                <input id="seat" class="text small" value="6A">
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>检票口：</td>
+                        <td>
+                            <span>
+                                <input id="barrier" class="text" value="14">
+                            </span>
+                        </td>
+                        <td>类型：</td>
+                        <td colspan="3">
+                            <label>
+                                <input id="fetch" class="rdo" type="radio" name="type" checked /> 接站</label>
+                            <label>
+                                <input id="sendOff" class="rdo" type="radio" name="type" /> 送站</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>原因：</td>
+                        <td colspan="5">
+                            <label>
+                                <input id="old" class="rdo" type="radio" name="cause" checked /> 老</label>
+                            <label>
+                                <input id="child" class="rdo" type="radio" name="cause" /> 幼</label>
+                            <label>
+                                <input id="patient" class="rdo" type="radio" name="cause" /> 病</label>
+                            <label>
+                                <input id="deformity" class="rdo" type="radio" name="cause" /> 残</label>
+                            <label>
+                                <input id="gravida" class="rdo" type="radio" name="cause" /> 孕</label>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div id="partTwo">
+            <img src="img/img2.jpg">
+        </div>
+        <div id="partThree">
+            <div id="thirdContent">
+                <table id="thirdTab">
+                    <tr>
+                        <td class="left">姓名：</td>
+                        <td class="right">
+                            <span id="name">何炅</span>
+                        </td>
+                        <td class="left"></td>
+                        <td class="right"></td>
+                        <td colspan="2" rowspan="5">
+                            <img id="thirdImg" src="img/img1.jpg">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="left">性别：</td>
+                        <td class="right">
+                            <span id="sex">男</span>
+                        </td>
+                        <td class="left">民族：</td>
+                        <td class="right">
+                            <span id="nation">汉族</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="left">出生：</td>
+                        <td class="right" colspan="3">
+                            <span id="birthday">1974年04月28日</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="left">住址：</td>
+                        <td class="right" colspan="3">
+                            <span id="address">北京市城东区桂园路雅苑小区2号楼11门303室</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="left" colspan="2">证件号码：</td>
+                        <td class="left" colspan="2">
+                            <span id="number">120106196412121236</span>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div id="partFour">持本凭证禁止乘车，且仅限本人当日当次有效。</div>
+        <div id="partFive">请您送人后1小时内反悔凭条办理处办理销号，未按此执行的将列入铁路征信系统，影响您下次购票乘车。</div>
+    </div>
+    <input name="print" type="button" id="bt" value="点击打印" onclick="printPage();"/>
+</body>
+
+</html>
