@@ -1,3 +1,4 @@
+
 //时间部分
 //补位函数。  
 function extra(x) {
@@ -29,7 +30,7 @@ function systemTime() {
     document.getElementById("time").innerHTML = year + "-" + month + "-" + day + "   " + hh + ":" + mm + ":" + ss;
 }
 //打印部分
-function showAndhidden() { 
+function showAndhidden() {
     var print = document.getElementById("printPage");  //获取打印区域
     print.style.display = "";  //让其显示
     var show = document.getElementById("show");  //获取原先的页面区域
@@ -51,10 +52,10 @@ function backHidden() {
     var show = document.getElementById("show");   //获取原先的页面显示内容
     show.style.display = "";       //让其显示
 }
-function printPage(){
-    $("#bt").css("display","none"); 
+function printPage() {
+    $("#bt").css("display", "none");
     self.print();
-    $("#bt").css("display","");  
+    $("#bt").css("display", "");
     return false;
 }
 //身份证部分显示
@@ -77,12 +78,19 @@ function birthday() {
     var _str_Birth = _str1 + _ss1() + _str2 + _ss2() + _str3;
     document.getElementById("birthday").innerHTML = _str_Birth;
 }
-$(function () {
-    systemTime();
-    birthday();
-    cardNumber();
-})
-
-function cardTest(name) {
-    return 100
+function inputvalue(name, sex, nation, birth, adress, idcard, photo) {
+    // var xpirnthtml = document.innerHTML()
+    // document.getElementById("name") = name;
+    // document.getElementById("sex") = sex;
+    // document.getElementById("nation") = nation;
+    // document.getElementById("birthday") = birth;
+    // document.getElementById("address") = adress;
+    // document.getElementById("number") = idcard;
+    // document.getElementById("thirdImg") = photo;
+    var n = 0;
+    // return "callbackOver"
+    return n
 }
+
+
+
