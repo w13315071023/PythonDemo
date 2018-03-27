@@ -4,9 +4,8 @@
 <head>
     <meta charset="UTF-8" />
     <title>Ticket</title>
-    <script type="text/javascript" src="js/jquery-1.7.2.js"></script>
+    <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
-    <script type="text/javascript" src="js/Test.js"></script>
     <script type="text/javascript"> 
     window.onload=function() { 
         systemTime();
@@ -88,48 +87,46 @@
             </div>
         </div>
         <div id="partTwo">
-            <img src="img/img2.jpg">
+            <img src="{{photoimg}}">
         </div>
         <div id="partThree">
             <div id="thirdContent">
                 <table id="thirdTab">
                     <tr>
                         <td class="left">姓名：</td>
-                        <td class="right">
-                            <span id="name">何炅</span>
+                        <td class="right" colspan="3">
+                            <span id="name">{{name}}</span>
                         </td>
-                        <td class="left"></td>
-                        <td class="right"></td>
                         <td colspan="2" rowspan="5">
-                            <img id="thirdImg" src="img/img1.jpg">
+                            <img id="thirdImg" src="{{idcardimg}}">
                         </td>
                     </tr>
                     <tr>
                         <td class="left">性别：</td>
                         <td class="right">
-                            <span id="sex">男</span>
+                            <span id="sex">{{sex}}</span>
                         </td>
                         <td class="left">民族：</td>
                         <td class="right">
-                            <span id="nation">汉族</span>
+                            <span id="nation">{{nation}}族</span>
                         </td>
                     </tr>
                     <tr>
                         <td class="left">出生：</td>
                         <td class="right" colspan="3">
-                            <span id="birthday">1974年04月28日</span>
+                            <span id="birthday">{{year}}年{{moth}}月{{day}}日</span>
                         </td>
                     </tr>
                     <tr>
                         <td class="left">住址：</td>
                         <td class="right" colspan="3">
-                            <span id="address">北京市城东区桂园路雅苑小区2号楼11门303室</span>
+                            <span id="address">{{address}}</span>
                         </td>
                     </tr>
                     <tr>
                         <td class="left" colspan="2">证件号码：</td>
                         <td class="left" colspan="2">
-                            <span id="number">120106196412121236</span>
+                            <span id="number">{{idcard}}</span>
                         </td>
                     </tr>
                 </table>

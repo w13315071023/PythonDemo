@@ -1,36 +1,50 @@
 # -*- coding:utf-8 -*-
 import ctypes
+import sys
 import os
 import io
 import time
 import execjs
 from flask import Flask
-from flask import request
 from flask import render_template
+from flask import request
 
-app = Flask(__name__)
+defaultencoding = 'utf-8'
+if sys.getdefaultencoding() != defaultencoding:
+    reload(sys)
+    sys.setdefaultencoding(defaultencoding)
+
 
 PROJECT_PATH = os.path.dirname(__file__)
 DLL_PATH = os.path.join(PROJECT_PATH,"Termb.dll")
 
-@app.route('/',methods = ['GET','POST'])
+app = Flask(__name__ , static_folder=PROJECT_PATH + '/templates/',static_url_path='')
+IsGetFrame = False
+
+@app.route('/',methods = ['GET'])
 def home():
-    print 'home'
-    # return render_template('home.html')
+    print 'index'
+    # read_card()
+    # jsfile = io.open(PROJECT_PATH+"/ticket-new/TicketIndex.html",'r',encoding='UTF-8').read()
+    return render_template("index.html")
 
-@app.route('/signin',methods = ['GET'])
-def signin_form():
-    print 'signin-get'
-    # return render_template('form.html')
+@app.route('/file', methods = ['GET','POST'])
+def File():
+    time.sleep(2)
+    # print request.form["Filename"]
+    # return """<img src="""+request.form['Filename']+""">"""
+    return render_template("templateindex.html",
+                           name="马振虎",
+                           sex="男",
+                           nation="汉",
+                           year="1994",
+                           moth="03",
+                           day="15",
+                           address="河南省濮阳市",
+                           idcard="123654789321421247",
+                           idcardimg = "img/img1.jpg",
+                           photoimg = request.form["Filename"])
 
-@app.route('/signin',methods = ['POST'])
-def sugnin():
-    print 'signin-post'
-    # username = request.form['username']
-    # password = request.form['password']
-    # if username == 'admin' and password == 'password':
-    #     return render_template('signin-ok.html',username = username)
-    # return render_template('form.html',message = 'Bad username or pasword',username = username )
 
 def read_card():
     cardstrarray = []
@@ -77,12 +91,6 @@ def read_card():
         print ("Init CVR Failed!")
         return []
 
-# def read_call_js(array):
-#     jsfile = io.open(PROJECT_PATH+"/ticket-new/TicketIndex.html",'r',encoding='UTF-8').read()
-#     refstr = execjs.compile(jsfile).call('inputvalue',array[0],array[1],array[2],array[3],array[4],array[5],array[8])
-#     print (refstr)
-
-# read_call_js(read_card())
 
 if __name__ == '__main__':
     app.run()
