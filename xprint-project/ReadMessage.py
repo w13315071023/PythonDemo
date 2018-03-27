@@ -5,6 +5,7 @@ import os
 import io
 import time
 import execjs
+from PIL import Image
 from flask import Flask
 from flask import render_template
 from flask import request
@@ -30,19 +31,18 @@ def home():
 
 @app.route('/file', methods = ['GET','POST'])
 def File():
-    time.sleep(2)
+    carddata = read_card()
     # print request.form["Filename"]
     # return """<img src="""+request.form['Filename']+""">"""
     return render_template("templateindex.html",
-                           name="马振虎",
-                           sex="男",
-                           nation="汉",
-                           year="1994",
-                           moth="03",
-                           day="15",
-                           address="河南省濮阳市",
-                           idcard="123654789321421247",
-                           idcardimg = "img/img1.jpg",
+                           name=carddata[0],
+                           sex=carddata[1],
+                           nation=carddata[2],
+                           year=str(carddata[3])[0:4],
+                           month=str(carddata[3])[4:6],
+                           day=str(carddata[3])[6:8],
+                           address=carddata[4],
+                           idcard=carddata[5],
                            photoimg = request.form["Filename"])
 
 
@@ -83,8 +83,8 @@ def read_card():
             cardstrarray.append(line)
             line = txtfile.readline()
 
-        cardstrarray.append(str(userpath+"xp.jpg"))
-        print cardstrarray[8]
+        img = Image.open(str(userpath+"xp.jpg"))
+        img.save(PROJECT_PATH + '/templates/img/cardphoto.png')
         myDLL.CVR_CloseComm()
         return cardstrarray
     else:
