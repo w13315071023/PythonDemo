@@ -31,18 +31,26 @@ def home():
 
 @app.route('/file', methods = ['GET','POST'])
 def File():
-    carddata = read_card()
-    # print request.form["Filename"]
-    # return """<img src="""+request.form['Filename']+""">"""
+    # carddata = read_card()
+    # return render_template("templateindex.html",
+    #                        name=carddata[0],
+    #                        sex=carddata[1],
+    #                        nation=carddata[2],
+    #                        year=str(carddata[3])[0:4],
+    #                        month=str(carddata[3])[4:6],
+    #                        day=str(carddata[3])[6:8],
+    #                        address=carddata[4],
+    #                        idcard=carddata[5],
+    #                        photoimg = request.form["Filename"])
     return render_template("templateindex.html",
-                           name=carddata[0],
-                           sex=carddata[1],
-                           nation=carddata[2],
-                           year=str(carddata[3])[0:4],
-                           month=str(carddata[3])[4:6],
-                           day=str(carddata[3])[6:8],
-                           address=carddata[4],
-                           idcard=carddata[5],
+                           name='孙晶伟',
+                           sex='男',
+                           nation='蒙古',
+                           year='1994',
+                           month='02',
+                           day='15',
+                           address='河南省天津市北京区内蒙古路上海社区2号110',
+                           idcard='110120199402151234',
                            photoimg = request.form["Filename"])
 
 
