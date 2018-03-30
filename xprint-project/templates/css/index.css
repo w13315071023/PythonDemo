@@ -50,13 +50,22 @@ span{
 #partThree{
 	margin-top: 10px;
 }
-#thirdTab td{
-    width: 50px;
+#thirdTab>tr{
+    display: inline-block;
+    width: 100%;
+}
+.left{
+    width: 60px;
+    float: left;
+}
+.right{
+    width: 190px;
+    text-align: left;
+    float: left;
 }
 #thirdImg{
-    float: left;
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 150px;
 }
 
 #partFour{
@@ -70,7 +79,7 @@ span{
     padding-right: 15px;
     padding-top: 10px;
     font-family: "黑体";
-    font-size: 24px;
+    font-size: 18px;
 }
 #bt{
     position: relative;
