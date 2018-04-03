@@ -5,14 +5,6 @@
     <meta charset="UTF-8" />
     <title>Ticket</title>
     <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
-    <script type="text/javascript" src="js/index.js"></script>
-    <script type="text/javascript"> 
-        window.onload=function() { 
-            systemTime();
-            birthday();
-            cardNumber();
-        }; 
-    </script>
     <link rel="stylesheet" type="text/css" href="css/index.css" />
 </head>
 
@@ -23,8 +15,8 @@
             <div id="firstContent">
                 <div id="firstTab">
                     <div>
-                        <p>时间：</p>
-                        <p id="time"></p>
+                        <p>&nbsp;时间:&nbsp;</p>
+                        <p id="time">{{datetime}}</p>
                         <p>
                             <select id="certifictes" class="text">
                                 <option value="idCard">身份证</option>
@@ -34,19 +26,19 @@
                         </p>
                     </div>
                     <div>
-                        <p>车次：</p>
+                        <p>&nbsp;车次:&nbsp;&nbsp;</p>
                         <p>
                             <span>
-                                <input id="train" class="text" value="G164">
+                                <input id="train" class="text" value="G164" style="margin-left: 14px;">
                             </span>
                         </p>
-                        <p>车厢：</p>
+                        <p>车厢:&nbsp;</p>
                         <p>
                             <span>
                                 <input id="carriage" class="text small" value="1">
                             </span>
                         </p>
-                        <p>坐席：</p>
+                        <p>坐席:&nbsp;</p>
                         <p>
                             <span>
                                 <input id="seat" class="text small" value="6A">
@@ -54,13 +46,13 @@
                         </p>
                     </div>
                     <div>
-                        <p>检票口：</p>
+                        <p>&nbsp;检票口:&nbsp;</p>
                         <p>
                             <span>
                                 <input id="barrier" class="text" value="14">
                             </span>
                         </p>
-                        <p>类型：</p>
+                        <p>类型:&nbsp;</p>
                         <p>
                             <label>
                                 <input id="fetch" class="rdo" type="radio" name="type" checked /> 接站</label>
@@ -69,7 +61,7 @@
                             </p>
                         </p>
                     <div id="reason">
-                        <p>原因：</p>
+                        <p>&nbsp;原因:</p>
                         <p>
                             <label>
                                 <input id="old" class="rdo" type="radio" name="cause" checked /> 老</label>
@@ -93,40 +85,40 @@
             <div id="thirdContent">
                 <div id="thirdTab">
                     <div>
-                        <p class="left">姓名：</p>
+                        <p class="left">&nbsp;姓名&nbsp;</p>
                         <p class="right" style="width:300px;">
                             <span id="name">{{name}}</span>
                         </p>
                     </div>
-                    <div s>
-                        <p class="left">性别：</p>
+                    <div>
+                        <p class="left">&nbsp;性别&nbsp;</p>
                         <p class="right">
                             <span id="sex">{{sex}}</span>
                         </p>
-                        <p class="left">民族：</p>
+                        <p class="left">民族&nbsp;</p>
                         <p class="right" style="width:200px;">
                             <span id="nation">{{nation}}族</span>
                         </p>
                     </div>
                     <div>
-                        <p class="left">出生：</p>
+                        <p class="left">&nbsp;出生&nbsp;</p>
                         <p class="right" style="width:300px;">
-                            <span id="birthday">{{year}}年{{month}}月{{day}}日</span>
+                            <span id="birthday">{{year}}&nbsp;&nbsp;年**月**日</span>
                         </p>
                     </div>
                     <div id="add">
-                        <p class="left">住址：</p>
+                        <p class="left">&nbsp;住址&nbsp;</p>
                         <p class="right" id="adres">
                             <span id="address">{{address}}</span>
                         </p>
                     </div>
                     <div>
-                        <p class="left">证件号码：</p>
+                        <p class="left">证件号码&nbsp;</p>
                         <p class="right">
-                            <span id="number">{{idcard}}</span>
+                            <span id="number">{{idcarda}}****{{idcardb}}</span>
                         </p>
                     </div>
-                    <div>
+                    <div id="headIcon">
                         <p>
                             <img id="thirdImg" src="img/cardphoto.png">
                         </p>
@@ -137,7 +129,6 @@
         <div id="partFour">持本凭证禁止乘车，且仅限本人当日当次有效。</div>
         <div id="partFive">请您送人后1小时内反悔凭条办理处办理销号，未按此执行的将列入铁路征信系统，影响您下次购票乘车。</div>
     </div>
-    <input name="print" type="button" id="bt" value="点击打印" onclick="printPage();"/>
 </body>
 
 </html>

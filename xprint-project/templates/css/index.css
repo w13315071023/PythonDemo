@@ -27,31 +27,53 @@ span{
     text-align: center;
     padding-left: 5px;
     font-family: "黑体";
+    margin-bottom: 10px;
 }
 #firstContent{
-    height: 210px;
+    height: auto;
+    overflow: hidden;
 }
+#firstTab>div{
+    height: 25px;
+    line-height: 25px;
+}
+#firstTab>div:last-child{
+    height: 50px;
+}
+#firstTab>div>p{
+    margin-top:0;
+    margin-bottom: 0;
+    height: 100%;
+}
+#firstTab>div:last-child>p{
+    height: 50%;
+}
+
 #time{
     width: 200px;
     margin-right: 55px;
 }
 #certifictes{
-    width: 90px;
-    margin-left: -43px;
+    width: 80px;
+    margin-left: -25px;
 }
 #train{
     margin-left: 15px;
 }
 #train,#carriage,#seat,#barrier{
-    width: 45px;
+    width: 54px;
     height: 15px;
-
+    font-family: 宋体;
 }
 #sendOff{
     margin-left: 15px;
 }
 #reason{
     display: inline-block;
+}
+#reason>p{
+    margin-top: 0;
+    margin-bottom: 0;
 }
 #partTwo{
     position: relative;
@@ -65,9 +87,30 @@ span{
     margin: 10px;
 }
 #partThree{
-    margin-top: 10px;
-    height: 200px;
-    line-height: 0px;   
+    margin-top: 30px;
+    height: auto;
+    /* line-height: 0px;    */
+}
+#thirdContent{
+    height: 100%;
+}
+#thirdTab{
+    height: 100%;
+    position: relative;
+}
+#thirdTab>div{
+    height: 27px;
+}
+#thirdTab>div>p{
+    margin-top:0;
+    margin-bottom: 0;
+    height: 100%;
+}
+#thirdTab>div#add{
+    height: 55px;
+}
+#number{
+    font-size: 16px;
 }
 #adres{
     width: 200px;
@@ -76,21 +119,28 @@ span{
     line-height: 20px;
     margin-top: 5px;
 }
-#thirdImg{
+#thirdTab>div#headIcon{
+    width: 115px;
+    height: 155px;
     position: absolute;
-    left: 275px;
-    top: 450px;
-    width: 120px;
-    height: 150px;
+    left: 260px;
+    top: 0;
+}
+#thirdImg{
+    height: 100%;
+}
+#sex{
+    padding-right: 35px;
 }
 
 #partFour{
     height: 20px;
 }
 #partFour,#partFive{
+    width: 97%;
     height: auto;
     font-weight: 600!important;
-    padding-left: 25px;
+    padding-left: 15px;
     padding-right: 15px;
     padding-top: 10px;
     font-family: "黑体";
