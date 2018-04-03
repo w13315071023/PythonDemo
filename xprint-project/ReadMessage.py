@@ -42,7 +42,7 @@ def File():
     #                        idcardb=(carddata[5])[14:18],
     #                        photoimg = request.form["Filename"])
     return render_template("templateindex.html",
-                           datatime='2018-02-24 19:45:08',
+                           datetime=time.strftime('%Y-%m-%d %H:%M:%S',time.localtime(time.time())),
                            name='孙晶伟',
                            sex='男',
                            nation='蒙古',
