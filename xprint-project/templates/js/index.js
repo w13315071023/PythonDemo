@@ -13,6 +13,7 @@ function extra(x) {
 //获取系统时间，将时间以指定格式显示到页面。  
 function systemTime() {
     //获取系统时间。  
+    console.log("gettime");
     var now = new Date();
     var year = now.getFullYear();       //年  
     var month = now.getMonth() + 1;     //月  

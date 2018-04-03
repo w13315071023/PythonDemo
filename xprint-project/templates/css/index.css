@@ -4,17 +4,18 @@
     padding: 0 5px;
     border: 1px dotted #000000;
     overflow: hidden;
-    /* float: left; */
+    font-size: 18px;
 }
 select{
-	border-style: dotted;
-}
+    border-style: dotted;
+    font-size: 18px;
+} 
 label{
 	position: relative;
 	margin-left: 12px;
 } 
-td{
-    height: 23px;
+div p{
+    float: left;
 }
 span{
     padding-right: 15px;
@@ -28,42 +29,57 @@ span{
     font-family: "黑体";
 }
 #firstContent{
-    height: 100px;
+    height: 210px;
 }
-#train,#carriage,#seat,#barrier{
-    width: 40px;
-    height: 15px;
-
+#time{
+    width: 200px;
+    margin-right: 55px;
 }
 #certifictes{
     width: 90px;
     margin-left: -43px;
 }
+#train{
+    margin-left: 15px;
+}
+#train,#carriage,#seat,#barrier{
+    width: 45px;
+    height: 15px;
+
+}
+#sendOff{
+    margin-left: 15px;
+}
+#reason{
+    display: inline-block;
+}
 #partTwo{
+    position: relative;
+    top: 10px;
     text-align: center;
     height: 190px;
+    margin-bottom: 10px;
 }
 #partTwo>img{
 	width: 250px;
     margin: 10px;
 }
 #partThree{
-	margin-top: 10px;
+    margin-top: 10px;
+    height: 200px;
+    line-height: 0px;   
 }
-#thirdTab>tr{
-    display: inline-block;
-    width: 100%;
-}
-.left{
-    width: 60px;
-    float: left;
-}
-.right{
-    width: 190px;
-    text-align: left;
-    float: left;
+#adres{
+    width: 200px;
+    word-wrap:break-word;
+    margin-right: 100px;
+    line-height: 20px;
+    margin-top: 5px;
 }
 #thirdImg{
+    position: absolute;
+    left: 275px;
+    top: 450px;
     width: 120px;
     height: 150px;
 }
@@ -73,13 +89,12 @@ span{
 }
 #partFour,#partFive{
     height: auto;
-    /* font-size: 20px; */
     font-weight: 600!important;
     padding-left: 25px;
     padding-right: 15px;
     padding-top: 10px;
     font-family: "黑体";
-    font-size: 18px;
+    font-size: 22px;
 }
 #bt{
     position: relative;
