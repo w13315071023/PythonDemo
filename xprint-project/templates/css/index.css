@@ -32,6 +32,8 @@ span{
 #firstContent{
     height: auto;
     overflow: hidden;
+    margin-top: -5px;
+    margin-left: 5px;
 }
 #firstTab>div{
     height: 25px;

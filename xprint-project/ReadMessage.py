@@ -31,26 +31,26 @@ def home():
 
 @app.route('/file', methods = ['GET','POST'])
 def File():
-    # carddata = read_card()
-    # return render_template("templateindex.html",
-    #                        name=carddata[0],
-    #                        sex=carddata[1],
-    #                        nation=carddata[2],
-    #                        year=str(carddata[3])[0:4],
-    #                        address=carddata[4],
-    #                        idcarda=(carddata[5])[0:10],
-    #                        idcardb=(carddata[5])[14:18],
-    #                        photoimg = request.form["Filename"])
+    carddata = read_card()
     return render_template("templateindex.html",
-                           datetime=time.strftime('%Y-%m-%d %H:%M:%S',time.localtime(time.time())),
-                           name='孙晶伟',
-                           sex='男',
-                           nation='蒙古',
-                           year='1994',
-                           address='河南省天津市北京区内蒙古路上海社区2号110',
-                           idcarda='1101201994',
-                           idcardb='1234',
-                           photoimg=request.form["Filename"])
+                           name=carddata[0],
+                           sex=carddata[1],
+                           nation=carddata[2],
+                           year=str(carddata[3])[0:4],
+                           address=carddata[4],
+                           idcarda=(carddata[5])[0:10],
+                           idcardb=(carddata[5])[14:18],
+                           photoimg = request.form["Filename"])
+    # return render_template("templateindex.html",
+    #                        datetime=time.strftime('%Y-%m-%d %H:%M:%S',time.localtime(time.time())),
+    #                        name='孙晶伟',
+    #                        sex='男',
+    #                        nation='蒙古',
+    #                        year='1994',
+    #                        address='河南省天津市北京区内蒙古路上海社区2号110',
+    #                        idcarda='1101201994',
+    #                        idcardb='1234',
+    #                        photoimg=request.form["Filename"])
 
 
 def read_card():
@@ -100,5 +100,5 @@ def read_card():
 
 
 if __name__ == '__main__':
-    app.run(port=5005)
+    app.run(port=5007)
     print ("Done")
