@@ -100,5 +100,5 @@ def read_card():
 
 
 if __name__ == '__main__':
-    app.run(port=5007)
+    app.run(port=5010)
     print ("Done")

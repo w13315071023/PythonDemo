@@ -65,7 +65,7 @@ span{
 #train,#carriage,#seat,#barrier{
     width: 54px;
     height: 15px;
-    font-family: 宋体;
+    font-family: '宋体';
 }
 #sendOff{
     margin-left: 15px;
