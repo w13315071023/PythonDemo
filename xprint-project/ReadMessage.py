@@ -31,8 +31,10 @@ def home():
 
 @app.route('/file', methods = ['GET','POST'])
 def File():
-    carddata = read_card()
+    read_card()
+    carddata = read_info()
     return render_template("templateindex.html",
+                           datetime=time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(time.time())),
                            name=carddata[0],
                            sex=carddata[1],
                            nation=carddata[2],
@@ -40,21 +42,20 @@ def File():
                            address=carddata[4],
                            idcarda=(carddata[5])[0:10],
                            idcardb=(carddata[5])[14:18],
-                           photoimg = request.form["Filename"])
+                           photoimg=request.form["Filename"])
     # return render_template("templateindex.html",
     #                        datetime=time.strftime('%Y-%m-%d %H:%M:%S',time.localtime(time.time())),
-    #                        name='孙晶伟',
-    #                        sex='男',
-    #                        nation='蒙古',
-    #                        year='1994',
-    #                        address='河南省天津市北京区内蒙古路上海社区2号110',
+    #                        name='姜善红',
+    #                        sex='女',
+    #                        nation='朝鲜',
+    #                        year='1990',
+    #                        address='黑龙江省牡丹江市阳明区五林镇长兴村2区40号',
     #                        idcarda='1101201994',
     #                        idcardb='1234',
     #                        photoimg=request.form["Filename"])
 
 
 def read_card():
-    cardstrarray = []
     myDLL = ctypes.WinDLL(DLL_PATH)
 
     ref = myDLL.CVR_InitComm(1001)
@@ -77,28 +78,26 @@ def read_card():
                 print ("Find card failed!")
             elif ref == 3:
                 print ("Select card failed!")
-
         ref = myDLL.CVR_Read_Content(1)
-
-        userpath = os.getenv("USERPROFILE")+"\\Appdata\\Local\\Temp\\chinaidcard\\"
-        txtfile = io.open(userpath+"wz.txt")
+    myDLL.CVR_CloseComm()
+        
+def read_info():
+    cardstrarray = []
+    userpath = os.getenv("USERPROFILE")+"\\Appdata\\Local\\Temp\\chinaidcard\\"
+    txtfile = io.open(userpath+"wz.txt")
+    line = txtfile.readline()
+    while line:
+        line = line.replace('\n','')
+        line = line.replace(' ','')
+        print(line)
+        cardstrarray.append(line)
         line = txtfile.readline()
-        while line:
-            line = line.replace('\n','')
-            line = line.replace(' ','')
-            print(line)
-            cardstrarray.append(line)
-            line = txtfile.readline()
 
-        img = Image.open(str(userpath+"xp.jpg"))
-        img.save(PROJECT_PATH + '/templates/img/cardphoto.png')
-        myDLL.CVR_CloseComm()
-        return cardstrarray
-    else:
-        print ("Init CVR Failed!")
-        return []
+    img = Image.open(str(userpath+"xp.jpg"))
+    img.save(PROJECT_PATH + '/templates/img/cardphoto.png')
+    return cardstrarray
 
 
 if __name__ == '__main__':
-    app.run(port=5010)
+    app.run(port=5014)
     print ("Done")
